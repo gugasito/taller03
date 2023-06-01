@@ -1,9 +1,10 @@
+import java.sql.Time;
 import java.util.ArrayList;
 public class Viaje {
 	private String origen;
 	private String destino;
-	private String salida;
-	private String llegada;
+	private Time salida;
+	private Time llegada;
 	private ArrayList<String> pasajeros;
 
 	public String getOrigen() {
@@ -22,19 +23,19 @@ public class Viaje {
 		this.destino = destino;
 	}
 
-	public String getSalida() {
+	public Time getSalida() {
 		return this.salida;
 	}
 
-	public void setSalida(String salida) {
+	public void setSalida(Time salida) {
 		this.salida = salida;
 	}
 
-	public String getLlegada() {
+	public Time getLlegada() {
 		return this.llegada;
 	}
 
-	public void setLlegada(String llegada) {
+	public void setLlegada(Time llegada) {
 		this.llegada = llegada;
 	}
 
@@ -44,5 +45,22 @@ public class Viaje {
 
 	public void setPasajeros(ArrayList<String> pasajeros) {
 		throw new UnsupportedOperationException();
+	}
+
+	public Viaje(String origen, String destino, Time salida, Time llegada) {
+		this.origen = origen;
+		this.destino = destino;
+		this.salida = salida;
+		this.llegada = llegada;
+	}
+
+	@Override
+	public String toString() {
+		return "Viaje{" +
+				"origen='" + origen + '\'' +
+				", destino='" + destino + '\'' +
+				", salida=" + salida +
+				", llegada=" + llegada +
+				'}';
 	}
 }

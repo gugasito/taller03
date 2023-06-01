@@ -38,4 +38,15 @@ public class Conductor {
     public void setLicencia(Licencia licencia) {
         this.licencia = licencia;
     }
+
+    public void setBus(Bus bus) {
+        this.bus = bus;
+    }
+
+    public Conductor(String nombre, String apellido, int telefono, Licencia licencia) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.licencia = licencia;
+    }
 }
